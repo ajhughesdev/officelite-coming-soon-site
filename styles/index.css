@@ -1,9 +1,99 @@
+@import "./reset.css";
+
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url(../fonts/KumbhSans-VariableFont_wght.woff2)
+    format("woff2-variations");
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+:root {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  text-align: center;
+  background-color: hsl(0, 0%, 98%)
+}
+
+header {
+  background-image: url('../assets/home/bg-pattern-header.svg');
+  background-repeat: no-repeat;
+  background-size: 28.625rem;
+  background-position: top -170px center;
+  padding-bottom: 180px;
+}
+
+.logo {
+  margin: 2.875rem auto 5rem;
+  width: 155px;
+}
+
+.illustration-charts {
+  display: block;
+  width: 171px;
+  margin: 0 auto 4rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 0 24px;
+  line-height: 1.2;
+  color: hsl(228, 22%, 26%);
+}
+
+p {
+  color: #747B95;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: calc(26 / 16);
+  padding: 24px;
+}
+
+.tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+article {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3.125rem 3.125rem -1.5625rem rgba(75, 92, 154, 0.247159);
+  border-radius: .8125rem; 
+}
+
+article:nth-last-of-type(even) {
+  background-color: hsl(228, 100%, 66%);
+}
+
+button {
+  border-radius: 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.75;
+  text-align: center;
+  padding: 0.875rem 3.375rem;
+}
+
+button[data-type="generic"] {
+  color: hsl(0, 0%, 100%);
+  background-color: #5175ff;
+  box-shadow: 0 1.5625rem 1.5625rem -0.625rem hsla(227, 52%, 50%, 0.247);
+}
+
+
 #countdown-timer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-#days, #hours, #minutes, #seconds {
+#days,
+#hours,
+#minutes,
+#seconds {
   display: flex;
   flex-direction: column;
 }

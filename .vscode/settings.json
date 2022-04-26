@@ -1,0 +1,10 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.fontFamily": "'Fantasque Sans Mono', sans-serif",
+  "editor.tabSize": 2,
+  "editor.autoClosingBrackets": "never",
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.matchBrackets": "always",
+  "html.autoClosingTags": false,
+  "html.format.indentInnerHtml": true
+}
