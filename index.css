@@ -1,0 +1,9 @@
+#countdown-timer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#days, #hours, #minutes, #seconds {
+  display: flex;
+  flex-direction: column;
+}

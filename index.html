@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
 
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
@@ -53,14 +54,16 @@
   </article>
 
   <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  <h2 id="countdown-date">Coming</h2>
+  <h2>Coming <span id="countdown-date"></span></h2>
 
   <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  <div id="countdown-timer"></div>
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
+  <div id="countdown-timer">
+  <span id="days"></span>
+  <span id="hours"></span>
+  <span id="minutes"></span>
+  <span id="seconds"></span>
+  </div>  
+
   <button>Get Started</button>
   <script src="countdownTimer.js"></script>
 </body>
