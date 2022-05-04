@@ -12,55 +12,79 @@
   </head>
 
   <body>
+
     <header>
       <img src="assets/shared/logo.svg" alt="logo" class="logo" />
       <img src="assets/home/illustration-charts.svg" class="illustration-charts" />
       <h1>A simple solution to complex tasks is coming soon</h1>
-
-      <p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
-        collaboration platform built with an intuitive interface to improve productivity.</p>
-
-      <button data-type="generic">Get Started</button>
+      <p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration
+        platform built with an intuitive interface to improve productivity.</p>
+      <button data-type="get-started">Get Started</button>
     </header>
+    <div id="tierCards"></div>
+<!-- 
     <section class="tiers">
       <article>
         <h2>Basic</h2>
         <ul>
           <li>Free</li>
           <li>Up to 5 users for free</li>
-          <li>Basic document collaboration</li>
-          <li>2 gb storage</li>
-          <li>Great security and support</li>
+          <li>
+            <p>Basic document collaboration</p>
+          </li>
+          <li>
+            <p>2 gb storage</p>
+          </li>
+          <li>
+            <p>Great security and support</p>
+          </li>
         </ul>
-        <button>Try for Free</button>
+        <button data-type="try-for-free">Try for Free</button>
       </article>
+
       <article>
         <h2>Pro</h2>
         <ul>
           <li>$9.99</li>
           <li>Per user, billed monthly</li>
-          <li>All essential integrations</li>
-          <li>50 gb storage</li>
-          <li>More control and insights</li>
+          <li>
+            <p>All essential integrations</p>
+          </li>
+          <li>
+            <p>50 gb storage</p>
+          </li>
+          <li>
+            <p>More control and insights</p>
+          </li>
         </ul>
-        <button>Try for Free</button>
+        <button data-type="try-for-free">Try for Free</button>
       </article>
+
       <article>
-        <h3>Ultimate</h3>
         <ul>
-          <li>$19.99</li>
-          <li>Per user, billed monthly</li>
-          <li>Robust work management</li>
-          <li>100 gb storage</li>
-          <li>VIP support</li>
+          <h2>Ultimate</h2>
+          <ul>
+            <li>$19.99</li>
+            <li>Per user, billed monthly</li>
+          </ul>
+          <li>
+            <p>Robust work management</p>
+          </li>
+          <li>
+            <p>100 gb storage</p>
+          </li>
+          <li>
+            <p>VIP support</p>
+          </li>
         </ul>
-        <button>Try for Free</button>
+        <button data-type="try-for-free">Try for Free</button>
       </article>
-    </section>
-    <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+
+    </section> -->
+    <!--  set to 30 days in the future from the moment the visitor views the page -->
     <h3>Coming <span id="countdown-date"></span></h3>
 
-    <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+    <!--  countdown from the date set above -->
     <div id="countdown-timer">
       <span id="days"></span>
       <span id="hours"></span>
@@ -68,7 +92,7 @@
       <span id="seconds"></span>
     </div>
 
-    <button data-type="generic">Get Started</button>
+    <button data-type="get-started">Get Started</button>
     <script src="countdownTimer.js"></script>
   </body>
 

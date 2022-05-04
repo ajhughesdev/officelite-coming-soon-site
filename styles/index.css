@@ -2,13 +2,12 @@
 
 @font-face {
   font-family: "Kumbh Sans";
-  src: url(../fonts/KumbhSans-VariableFont_wght.woff2)
-    format("woff2-variations");
+  src: url(../fonts/KumbhSans-VariableFont_wght.woff2) format("woff2-variations");
   font-style: normal;
   font-weight: 100 900;
 }
 
-:root {
+html {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 16px;
 }
@@ -23,7 +22,7 @@ header {
   background-repeat: no-repeat;
   background-size: 28.625rem;
   background-position: top -170px center;
-  padding-bottom: 180px;
+  padding-bottom: 6.25rem;
 }
 
 .logo {
@@ -40,7 +39,7 @@ header {
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  padding: 0 24px;
+  padding: 0 1.5rem 1.5rem;
   line-height: 1.2;
   color: hsl(228, 22%, 26%);
 }
@@ -50,7 +49,11 @@ p {
   font-size: 1rem;
   font-weight: 400;
   line-height: calc(26 / 16);
-  padding: 24px;
+  padding: 0 1.5rem;
+}
+
+li > p {
+
 }
 
 .tiers {
@@ -62,11 +65,19 @@ p {
 article {
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0px 3.125rem 3.125rem -1.5625rem rgba(75, 92, 154, 0.247159);
-  border-radius: .8125rem; 
+  border-radius: .8125rem;
+  width: calc(100% - 3rem);
+  min-height: 31.75rem;
+  margin: 0 auto;
 }
 
-article:nth-last-of-type(even) {
+article:nth-child(even) {
+  color: hsl(0, 0%, 100%);
   background-color: hsl(228, 100%, 66%);
+  background-image: url('../assets/home/bg-pattern-pricing.svg');
+  background-repeat: no-repeat;
+  background-size: 55rem;
+  background-position: bottom .4375rem center;
 }
 
 button {
@@ -75,19 +86,70 @@ button {
   font-weight: 700;
   line-height: 1.75;
   text-align: center;
-  padding: 0.875rem 3.375rem;
+  padding: 0.875rem 2.5625rem;
 }
 
-button[data-type="generic"] {
+body>button:last-of-type {
+  margin-top: 2rem;
+}
+
+button[data-type="get-started"] {
   color: hsl(0, 0%, 100%);
   background-color: #5175ff;
   box-shadow: 0 1.5625rem 1.5625rem -0.625rem hsla(227, 52%, 50%, 0.247);
+  margin: 1.5rem 0 0; 
 }
 
+button[data-type="try-for-free"] {
+  color: hsl(228, 100%, 66%);
+  background-color: hsla(228, 100%, 66%, 0.15);
+}
+
+article:nth-child(even) button {
+  color: hsl(228, 100%, 66%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 2.5rem auto;
+  line-height: 1.4;
+}
+
+h2:not(article:nth-child(even) h2) {
+  color: hsl(228, 22%, 26%);
+}
+
+li:nth-child(1) {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: calc(64 / 56);
+}
+
+li:nth-child(1):not(article:nth-child(even) li:nth-child(1)) {
+  color: hsl(228, 22%, 26%);
+}
+
+li:not(:nth-child(2)) {
+  line-height: 1.75;
+}
+
+li:nth-child(2):not(article:nth-child(even) li:nth-child(2)) {
+  color: hsl(228, 22%, 26%);
+}
+
+li:nth-child(2):not(article:nth-child(even) li:nth-child(2))~li {
+  color: hsl(227, 13%, 52%);
+}
+
+article:nth-child(even) li:nth-child(2)~li {
+  opacity: .75;
+}
 
 #countdown-timer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 #days,
