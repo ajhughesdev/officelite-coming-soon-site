@@ -2,7 +2,8 @@
 
 @font-face {
   font-family: "Kumbh Sans";
-  src: url(../fonts/KumbhSans-VariableFont_wght.woff2) format("woff2-variations");
+  src: url(./../../public/assets/fonts/KumbhSans-VariableFont_wght.woff2)
+    format("woff2-variations");
   font-style: normal;
   font-weight: 100 900;
 }
@@ -27,7 +28,7 @@ body {
 }
 
 .hero {
-  background-image: url("../assets/home/bg-pattern-header.svg");
+  background-image: url("./../../public/assets/home/bg-pattern-header.svg");
   background-repeat: no-repeat;
   background-size: 28.625rem;
   background-position: top -10.625rem center;
@@ -79,7 +80,7 @@ article {
 article:nth-child(even) {
   color: hsl(0, 0%, 100%);
   background-color: hsl(228, 100%, 66%);
-  background-image: url("../assets/home/bg-pattern-pricing.svg");
+  background-image: url("./../../public/assets/home/bg-pattern-pricing.svg");
   background-repeat: no-repeat;
   background-size: 55rem;
   background-position: bottom 0.4375rem center;
@@ -111,7 +112,7 @@ button[data-type="try-for-free"] {
   margin: 2rem auto 2.5rem;
 }
 
-body>button:last-of-type {
+body > button:last-of-type {
   width: 10.6875rem;
   margin: 2.5rem auto;
 }
@@ -167,7 +168,7 @@ h3 {
   font-size: 1rem;
   font-weight: 700;
   line-height: 3;
-  letter-spacing: .3125rem;
+  letter-spacing: 0.3125rem;
   color: hsl(0, 0%, 100%);
   position: absolute;
   bottom: 306px;
@@ -190,7 +191,7 @@ h3 span {
   bottom: 12.25rem;
   width: calc(100% - 3rem);
   margin: auto 1.5rem;
-  gap: .875rem;
+  gap: 0.875rem;
 }
 
 #days,
@@ -200,7 +201,7 @@ h3 span {
   display: grid;
   grid-template-columns: auto;
   text-align: center;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   height: 5.75rem;
   background-color: hsl(227, 22%, 26%);
 }
@@ -210,14 +211,14 @@ h3 span {
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
-  padding: .6875rem 1rem;
+  padding: 0.6875rem 1rem;
 }
 
-#days>span~span,
-#hours>span~span,
-#minutes>span~span,
-#seconds>span~span {
-  font-size: .75rem;
+#days > span ~ span,
+#hours > span ~ span,
+#minutes > span ~ span,
+#seconds > span ~ span {
+  font-size: 0.75rem;
   font-weight: 700;
   color: #fff;
   line-height: calc(28 / 12);
@@ -235,7 +236,7 @@ footer {
   height: 78rem;
   z-index: -1;
   background-color: hsl(228, 22%, 19%);
-  background-image: url('../assets/home/bg-pattern-footer.svg');
+  background-image: url("./../../public/assets/home/bg-pattern-footer.svg");
   background-size: 75.125rem;
   background-position: bottom -110px center;
   background-repeat: no-repeat;

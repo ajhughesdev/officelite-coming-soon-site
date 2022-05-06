@@ -1,4 +1,4 @@
-const url = "tierData.json";
+const url = "./../../public/data/tierData.json";
 const itemsContainer = document.querySelector("#items-container");
 
 function useState() {
