@@ -2,97 +2,46 @@
 <html lang="en">
 
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-    <link rel="stylesheet" href="./styles/index.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="font" href="./fonts/KumbhSans-VariableFont_wght.woff2">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script defer src="tierCards.js"></script>
 
     <title>Frontend Mentor | Officelite coming soon site</title>
   </head>
 
   <body>
-
-    <header>
+    <main class="hero">
       <img src="assets/shared/logo.svg" alt="logo" class="logo" />
-      <img src="assets/home/illustration-charts.svg" class="illustration-charts" />
+      <img src="assets/home/illustration-charts.svg" class="illustration-charts" alt="chart illustrations" />
       <h1>A simple solution to complex tasks is coming soon</h1>
-      <p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration
-        platform built with an intuitive interface to improve productivity.</p>
+      <p>
+        Say goodbye to inefficient juggling of multiple apps, teams, and
+        projects. Officelite is the new collaboration platform built with an
+        intuitive interface to improve productivity.
+      </p>
       <button data-type="get-started">Get Started</button>
-    </header>
-    <div id="tierCards"></div>
-<!-- 
-    <section class="tiers">
-      <article>
-        <h2>Basic</h2>
-        <ul>
-          <li>Free</li>
-          <li>Up to 5 users for free</li>
-          <li>
-            <p>Basic document collaboration</p>
-          </li>
-          <li>
-            <p>2 gb storage</p>
-          </li>
-          <li>
-            <p>Great security and support</p>
-          </li>
-        </ul>
-        <button data-type="try-for-free">Try for Free</button>
-      </article>
-
-      <article>
-        <h2>Pro</h2>
-        <ul>
-          <li>$9.99</li>
-          <li>Per user, billed monthly</li>
-          <li>
-            <p>All essential integrations</p>
-          </li>
-          <li>
-            <p>50 gb storage</p>
-          </li>
-          <li>
-            <p>More control and insights</p>
-          </li>
-        </ul>
-        <button data-type="try-for-free">Try for Free</button>
-      </article>
-
-      <article>
-        <ul>
-          <h2>Ultimate</h2>
-          <ul>
-            <li>$19.99</li>
-            <li>Per user, billed monthly</li>
-          </ul>
-          <li>
-            <p>Robust work management</p>
-          </li>
-          <li>
-            <p>100 gb storage</p>
-          </li>
-          <li>
-            <p>VIP support</p>
-          </li>
-        </ul>
-        <button data-type="try-for-free">Try for Free</button>
-      </article>
-
-    </section> -->
-    <!--  set to 30 days in the future from the moment the visitor views the page -->
-    <h3>Coming <span id="countdown-date"></span></h3>
-
-    <!--  countdown from the date set above -->
-    <div id="countdown-timer">
-      <span id="days"></span>
-      <span id="hours"></span>
-      <span id="minutes"></span>
-      <span id="seconds"></span>
-    </div>
-
-    <button data-type="get-started">Get Started</button>
+      <div class="tier-cards">
+        <div id="items-container"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-svg">
+        <img src="assets/home/bg-pattern-footer.svg" alt="decorative overlay" class="bg-pattern-footer"/>
+      </div>
+      <!--  set to 30 days in the future from the moment the visitor views the page -->
+      <h3>Coming <span id="countdown-date"></span></h3>
+      <!--  countdown from the date set above -->
+      <div id="countdown-timer">
+        <span id="days"></span>
+        <span id="hours"></span>
+        <span id="minutes"></span>
+        <span id="seconds"></span>
+      </div>
+      <button data-type="get-started">Get Started</button>
+    </footer>
     <script src="countdownTimer.js"></script>
   </body>
 
