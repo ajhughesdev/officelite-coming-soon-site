@@ -14,21 +14,20 @@
   src: local("Arial");
 }
 
-
 html {
   font-family: "Kumbh Sans", "Kumbh Sans-fallback", sans-serif;
   font-size: 16px;
-
+  overflow-x: hidden;
 }
 
 body {
   display: grid;
   text-align: center;
-  background-color: hsl(0, 0%, 98%)
+  background-color: hsl(0, 0%, 98%);
 }
 
 .hero {
-  background-image: url('../assets/home/bg-pattern-header.svg');
+  background-image: url("../assets/home/bg-pattern-header.svg");
   background-repeat: no-repeat;
   background-size: 28.625rem;
   background-position: top -10.625rem center;
@@ -61,8 +60,8 @@ p {
 }
 
 .tier-cards {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin: auto auto;
 }
@@ -70,20 +69,20 @@ p {
 article {
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0px 50px 50px -25px hsla(227, 35%, 45%, 0.247);
-  border-radius: .8125rem;
+  border-radius: 0.8125rem;
   width: calc(100% - 3rem);
   min-height: 31.75rem;
-  margin: 2.5rem auto;
+  margin: 2.5rem auto 0;
   position: relative;
 }
 
 article:nth-child(even) {
   color: hsl(0, 0%, 100%);
   background-color: hsl(228, 100%, 66%);
-  background-image: url('../assets/home/bg-pattern-pricing.svg');
+  background-image: url("../assets/home/bg-pattern-pricing.svg");
   background-repeat: no-repeat;
   background-size: 55rem;
-  background-position: bottom .4375rem center;
+  background-position: bottom 0.4375rem center;
 }
 
 article:first-of-type {
@@ -99,12 +98,11 @@ button {
   padding: 0.875rem 40px 14px 40px;
 }
 
-
 button[data-type="get-started"] {
   color: hsl(0, 0%, 100%);
   background-color: #5175ff;
   box-shadow: 0 1.5625rem 1.5625rem -0.625rem hsla(227, 52%, 50%, 0.247);
-  margin: 1.5rem 0 6.25rem;
+  margin: 1.5rem auto 6.25rem;
 }
 
 button[data-type="try-for-free"] {
@@ -114,7 +112,8 @@ button[data-type="try-for-free"] {
 }
 
 body>button:last-of-type {
-  margin-top: 2rem;
+  width: 10.6875rem;
+  margin: 2.5rem auto;
 }
 
 article:nth-child(even) button {
@@ -152,48 +151,92 @@ li:nth-child(4) {
   padding: 1rem 0 1rem;
 }
 
-li:nth-child(1n+3) {
+li:nth-child(1n + 3) {
   line-height: 1.75;
 }
 
-li:nth-child(1n+3):not(article:nth-child(even) li:nth-child(1n+3)) {
+li:nth-child(1n + 3):not(article:nth-child(even) li:nth-child(1n + 3)) {
   color: hsl(227, 13%, 52%);
 }
 
-article:nth-child(even) li:nth-child(1n+3) {
-  opacity: .75;
+article:nth-child(even) li:nth-child(1n + 3) {
+  opacity: 0.75;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 3;
+  letter-spacing: .3125rem;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  bottom: 306px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h3 span {
+  color: hsl(228, 100%, 66%);
 }
 
 #countdown-timer {
+  color: hsl(0, 0%, 100%);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 12.25rem;
+  width: calc(100% - 3rem);
+  margin: auto 1.5rem;
+  gap: .875rem;
 }
 
 #days,
 #hours,
 #minutes,
 #seconds {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
+  text-align: center;
+  border-radius: .25rem;
+  height: 5.75rem;
+  background-color: hsl(227, 22%, 26%);
+}
+
+.num {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  padding: .6875rem 1rem;
+}
+
+#days>span~span,
+#hours>span~span,
+#minutes>span~span,
+#seconds>span~span {
+  font-size: .75rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: calc(28 / 12);
+  opacity: 0.5;
+  transform: translateY(-16px);
 }
 
 footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end;
   position: absolute;
-  top: 105.25rem;
+  top: 106.8125rem;
   width: 100%;
   height: 78rem;
+  z-index: -1;
   background-color: hsl(228, 22%, 19%);
-  z-index: -2;
-  /* background-image: url('../assets/home/bg-pattern-footer.svg');
+  background-image: url('../assets/home/bg-pattern-footer.svg');
   background-size: 75.125rem;
-  background-position: bottom -110px center; */
-}
-
-.bg-pattern-footer {
-  width: 75.125rem;
-  position: absolute;
-  /* background-image: url('../assets/home/bg-pattern-footer.svg');
+  background-position: bottom -110px center;
   background-repeat: no-repeat;
-  background-size: 75.125rem;
-  background-position: bottom -110px center; */
 }
