@@ -2,8 +2,7 @@
 
 @font-face {
   font-family: "Kumbh Sans";
-  src: url(./../../public/assets/fonts/KumbhSans-VariableFont_wght.woff2)
-    format("woff2-variations");
+  src: url(./../../public/assets/fonts/KumbhSans-VariableFont_wght.woff2) format("woff2-variations");
   font-style: normal;
   font-weight: 100 900;
 }
@@ -41,7 +40,7 @@ body {
 
 .illustration-charts {
   display: block;
-  margin: 5rem auto 0;
+  margin: 4.75rem auto 0;
 }
 
 h1 {
@@ -90,34 +89,36 @@ article:first-of-type {
   margin-top: 0;
 }
 
-button {
+a:not(.home-anchor) {
+  display: block;
   border-radius: 1.75rem;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.75;
   text-align: center;
   padding: 0.875rem 40px 14px 40px;
+  max-width: 10.6785rem;
 }
 
-button[data-type="get-started"] {
+a.getting-started {
   color: hsl(0, 0%, 100%);
   background-color: #5175ff;
   box-shadow: 0 1.5625rem 1.5625rem -0.625rem hsla(227, 52%, 50%, 0.247);
   margin: 1.5rem auto 6.25rem;
 }
 
-button[data-type="try-for-free"] {
+a.try-for-free {
   color: hsl(228, 100%, 66%);
   background-color: hsla(228, 100%, 66%, 0.15);
   margin: 2rem auto 2.5rem;
 }
 
-body > button:last-of-type {
+body>a:last-of-type {
   width: 10.6875rem;
   margin: 2.5rem auto;
 }
 
-article:nth-child(even) button {
+article:nth-child(even) a {
   color: hsl(228, 100%, 66%);
   background-color: hsl(0, 0%, 100%);
 }
@@ -203,6 +204,7 @@ h3 span {
   text-align: center;
   border-radius: 0.25rem;
   height: 5.75rem;
+  width: 4.5rem;
   background-color: hsl(227, 22%, 26%);
 }
 
@@ -214,15 +216,16 @@ h3 span {
   padding: 0.6875rem 1rem;
 }
 
-#days > span ~ span,
-#hours > span ~ span,
-#minutes > span ~ span,
-#seconds > span ~ span {
+#days>span~span,
+#hours>span~span,
+#minutes>span~span,
+#seconds>span~span {
   font-size: 0.75rem;
   font-weight: 700;
   color: #fff;
   line-height: calc(28 / 12);
   opacity: 0.5;
+  mix-blend-mode: normal;
   transform: translateY(-16px);
 }
 

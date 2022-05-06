@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
-    <link rel="stylesheet" href="../src/styles/index.css" />
+    <link rel="stylesheet" href="./../src/styles/index.css" />
     <script defer src="./../src/scripts/tierCards.js"></script>
 
     <title>Frontend Mentor | Officelite coming soon site</title>
@@ -13,7 +13,8 @@
 
   <body>
     <main class="hero">
-      <img src="./assets/shared/logo.svg" alt="logo" class="logo" />
+      <a href="#" class="home-anchor">
+        <img src="./assets/shared/logo.svg" alt="logo" class="logo" /></a>
       <img src="./assets/home/illustration-charts.svg" class="illustration-charts" alt="chart illustrations" />
       <h1>A simple solution to complex tasks is coming soon</h1>
       <p>
@@ -21,7 +22,7 @@
         projects. Officelite is the new collaboration platform built with an
         intuitive interface to improve productivity.
       </p>
-      <button data-type="get-started">Get Started</button>
+      <a href="sign-up.html" class="getting-started">Get Started</a>
       <div class="tier-cards">
         <div id="items-container"></div>
       </div>
@@ -36,7 +37,7 @@
         <span id="minutes"></span>
         <span id="seconds"></span>
       </div>
-      <button data-type="get-started">Get Started</button>
+      <a href="sign-up.html" class="getting-started">Get Started</a>
     </footer>
     <script src="./../src/scripts/countdownTimer.js"></script>
   </body>

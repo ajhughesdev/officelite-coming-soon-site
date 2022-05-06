@@ -1,4 +1,4 @@
-const url = "./../../public/data/tierData.json";
+const url = "./../../public/data/tierdata.json";
 const itemsContainer = document.querySelector("#items-container");
 
 function useState() {
@@ -30,7 +30,7 @@ function cardTemplate(data) {
       <li>${details.storage}</li>
       <li>${details.blurb2}</li>
     </ul>
-    <button data-type="try-for-free">Try for Free</button>
+    <a href="sign-up.html" class="try-for-free">Try for Free</a>
   </article>
   `;
 }
