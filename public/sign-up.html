@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="./../src/styles/index.css" />
 
     <title>Frontend Mentor | Officelite coming soon site</title>
-</head>
-<body>
-  Work smarter. Save time.
+  </head>
 
-  Easily manage your projects. Get on the list and receive in-app perks available only to 
-  early subscribers. We are moving into final development and getting ready for official launch soon.
+  <body>
+    <main class="sign-up">
+      <a href="#" class="home-anchor">
+        <img src="./assets/shared/logo.svg" alt="logo" class="logo" /></a>
+      <h1>Work smarter. Save time.</h1>
 
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
+      <p>Easily manage your projects. Get on the list and receive in-app perks available only to
+        early subscribers. We are moving into final development and getting ready for official launch soon.</p>
 
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
+      <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+      <h3 class="h3-signup">coming <span id="countdown-date"></span></h3>
 
-  Name
-  Email Address
-  Basic Pack Free
-  Basic Pack Free
-  Pro Pack $9.99
-  Ultimate Pack $19.99
-  Phone Number
-  Company
-  Get on the list
-</body>
+      <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+      <div class="countdown-timer-signup">
+        <span id="days"></span>
+        <span id="hours"></span>
+        <span id="minutes"></span>
+        <span id="seconds"></span>
+      </div>
+    </main>
+    <footer class="footer-signup">
+      <form action="/sign-up-form-data" method="post">
+        <ul class="sign-up-form">
+          <li>
+            <input type="text" placeholder="Name" />
+          </li>
+          <li>
+            <input type="email" placeholder="Email Address" />
+          </li>
+          <li>
+            <select>
+              <option value="Basic Pack Free">1</option>
+              <option value="Pro Pack $9.99">2</option>
+              <option value="Ultimate Pack $19.99">3</option>
+            </select>
+          </li>
+          <li>
+            <input type="text" placeholder="Phone Number" />
+          </li>
+          <li>
+            <input type="text" placeholder="Company" />
+          </li>
+          <li>
+            <button type="submit">Get on the list</button>
+          </li>
+        </ul>
+      </form>
+
+    </footer>
+    <script src="./../src/scripts/countdownTimer.js"></script>
+  </body>
+
 </html>

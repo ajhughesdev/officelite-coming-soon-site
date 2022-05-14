@@ -26,7 +26,8 @@ body {
   background-color: hsl(0, 0%, 98%);
 }
 
-.hero {
+.hero,
+.sign-up {
   background-image: url("./../../public/assets/home/bg-pattern-header.svg");
   background-repeat: no-repeat;
   background-size: 28.625rem;
@@ -35,7 +36,11 @@ body {
 
 .logo {
   margin: 2.875rem auto 0;
-  width: 155px;
+  width: 9.6875rem;
+}
+
+.sign-up .logo {
+  margin: 2.875rem auto 5rem;
 }
 
 .illustration-charts {
@@ -89,7 +94,8 @@ article:first-of-type {
   margin-top: 0;
 }
 
-a:not(.home-anchor) {
+a:not(.home-anchor),
+button {
   display: block;
   border-radius: 1.75rem;
   font-size: 1rem;
@@ -100,7 +106,12 @@ a:not(.home-anchor) {
   max-width: 10.6785rem;
 }
 
-a.getting-started {
+button {
+  min-width: 17.4375rem;
+}
+
+a.getting-started,
+button {
   color: hsl(0, 0%, 100%);
   background-color: #5175ff;
   box-shadow: 0 1.5625rem 1.5625rem -0.625rem hsla(227, 52%, 50%, 0.247);
@@ -179,11 +190,17 @@ h3 {
   margin: 0 auto;
 }
 
+h3.h3-signup {
+  position: unset;
+  color: hsl(228, 22%, 26%);
+  margin: 64px auto 18px;
+}
+
 h3 span {
   color: hsl(228, 100%, 66%);
 }
 
-#countdown-timer {
+.countdown-timer {
   color: hsl(0, 0%, 100%);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -195,10 +212,18 @@ h3 span {
   gap: 0.875rem;
 }
 
-#days,
-#hours,
-#minutes,
-#seconds {
+.countdown-timer-signup {
+  color: hsl(228, 100%, 66%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+  width: calc(100% - 3rem);
+  margin: auto 1.5rem;
+  gap: 0.875rem;
+  position: unset;
+}
+
+.countdown-timer>span {
   display: grid;
   grid-template-columns: auto;
   text-align: center;
@@ -206,6 +231,16 @@ h3 span {
   height: 5.75rem;
   width: 4.5rem;
   background-color: hsl(227, 22%, 26%);
+}
+
+.countdown-timer-signup>span {
+  display: grid;
+  grid-template-columns: auto;
+  text-align: center;
+  border-radius: 0.25rem;
+  height: 5.75rem;
+  width: 4.5rem;
+  background-color: hsla(228, 100%, 66%, .1);
 }
 
 .num {
@@ -216,10 +251,7 @@ h3 span {
   padding: 0.6875rem 1rem;
 }
 
-#days>span~span,
-#hours>span~span,
-#minutes>span~span,
-#seconds>span~span {
+.countdown-timer span>span~span {
   font-size: 0.75rem;
   font-weight: 700;
   color: #fff;
@@ -229,9 +261,19 @@ h3 span {
   transform: translateY(-16px);
 }
 
+.countdown-timer-signup span>span~span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: hsl(227, 22%, 26%);
+  line-height: calc(28 / 12);
+  opacity: 0.5;
+  mix-blend-mode: normal;
+  transform: translateY(-16px);
+}
+
 footer {
   display: grid;
-  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr;  */
   align-items: end;
   position: absolute;
   top: 106.8125rem;
@@ -243,4 +285,45 @@ footer {
   background-size: 75.125rem;
   background-position: bottom -110px center;
   background-repeat: no-repeat;
+}
+
+.footer-signup {
+  background-image: url("./../../public/assets/sign-up/bg-pattern-side.svg");
+  background-position: bottom -474px center;
+  height: 20rem;
+  top: 916px;
+}
+
+form {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 50px 50px -25px hsla(227, 35%, 45%, 0.247);
+  border-radius: 0.8125rem;
+  width: calc(100% - 3rem);
+  position: absolute;
+  padding: 1.5rem;
+  align-items: end;
+  height: 29.0625rem;
+  bottom: 5.4375rem;
+  margin: auto 1.5rem;
+}
+
+.sign-up-form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.sign-up-form li {
+  all: unset;
+  margin-top: 24px;
+  line-height: 1.75;
+  color: hsla(227, 14%, 52%, .5);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+::placeholder {
+  line-height: 1.75;
+  color: hsla(227, 14%, 52%, .5);
+  font-size: 1rem;
+  font-weight: 400;
 }
