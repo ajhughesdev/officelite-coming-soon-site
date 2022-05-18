@@ -39,13 +39,42 @@
           <p>
             <input type="email" placeholder="Email Address" />
           </p>
-          <div class="custom-select" style="width:100%;">
+          <!-- <div class="custom-select" style="width:100%;">
             <select>
               <option value="0">Options</option>
               <option value="1"><span>Basic Pack</span><span> Free</span></option>
               <option value="2"><span>Pro Pack</span><span> $9.99</span></option>
               <option value="3"><span>Ultimate Pack</span><span> $19.99</span></option>
             </select>
+          </div> -->
+          <div class="select-box">
+            <div class="select-box__current" tabindex="1">
+              <div class="select-box__value">
+                <input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked" />
+                <p class="select-box__input-text"><span class="strong">Basic Pack</span> Free</p>
+              </div>
+              <div class="select-box__value">
+                <input class="select-box__input" type="radio" id="1" value="2" name="Ben" />
+                <p class="select-box__input-text"><span class="strong">Pro Pack</span> $9.99</p>
+              </div>
+              <div class="select-box__value">
+                <input class="select-box__input" type="radio" id="2" value="3" name="Ben" />
+                <p class="select-box__input-text"><span class="strong">Ultimate Pack</span> $19.99</p>
+              </div>
+              <img class="select-box__icon" src="./../public/assets/sign-up/icon-arrow-down.svg" alt="Arrow Icon"
+                aria-hidden="true" />
+            </div>
+            <div class="select-box__list">
+              <p>
+                <label class="select-box__option" for="0" aria-hidden="aria-hidden"><span class="strong">Basic Pack</span> Free</label>
+              </p>
+              <p>
+                <label class="select-box__option" for="1" aria-hidden="aria-hidden"><span class="strong">Pro Pack</span> $9.99</label>
+              </p>
+              <p>
+                <label class="select-box__option" for="2" aria-hidden="aria-hidden"><span class="strong">Ultimate Pack</span> $19.99</label>
+              </p>
+            </div>
           </div>
           <p>
             <input type="text" placeholder="Phone Number" />
@@ -62,7 +91,6 @@
       </form>
 
     </footer>
-    <script src="./../src/scripts/dropdownList.js"></script>
     <script src="./../src/scripts/countdownTimer.js"></script>
   </body>
 

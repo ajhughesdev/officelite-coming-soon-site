@@ -306,7 +306,7 @@ form {
   text-align: left;
 }
 
-form p {
+form p:not(.select-box__list p) {
   border-bottom: 1px solid hsla(227, 14%, 52%, .5);
   padding: 0 0 1rem 1rem;
 }
@@ -322,73 +322,128 @@ form p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  padding: 1.5rem 1.5rem 1.5rem;
+  padding: 1.5rem 1.5rem 2.5rem;
 }
 
-.custom-select {
+.select-box {
   position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Kumbh Sans", "Kumbh Sans-fallback", sans-serif;
+  font-size: 1rem;
+  color: #60666d;
 }
 
-.custom-select select {
+.select-box__current {
+  position: relative;
+  /* box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1); */
+  cursor: pointer;
+  outline: none; 
+}
+.select-box__current:hover {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.50438L3.9944 10.4988L13.4932 1' stroke='%235175FF' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+
+.select-box__current:focus+.select-box__list {
+  opacity: 1;
+  animation-name: none;
+}
+
+.select-box__current:focus+.select-box__list .select-box__option{
+  cursor: pointer;
+}
+
+.select-box__current:focus .select-box__icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select-box__icon {
+  position: absolute;
+  bottom: 19px;
+  right: 11px;
+  transform: translateY(-50%);
+  transition: 0.2s ease;
+}
+
+.select-box__value {
+  display: flex;
+}
+
+.select-box__input {
   display: none;
 }
 
-.select-selected {
-  background-color: hsl(0, 0%, 100%);
-  background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%235175FF' stroke-width='2' d='M1 1l5.5 5.5L12 1' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 11px bottom 22px;
+.select-box__input:checked+.select-box__input-text {
+  display: block;
+
 }
 
-.select-selected:after {
+.select-box__input-text {
+  display: none;
+  width: 100%;
+  margin: 0;
+  background-color: #fff;
+}
+
+.select-box__list {
   position: absolute;
-  content: "";
-  /* top: 14px;
-  right: 10px; */
-  width: 0;
-  height: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='13' height='9' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.5L6.5 2L12 7.5' stroke='%235175FF' stroke-width='2'/%3E%3C/svg%3E%0A")
+  width: 102%;
+  padding: 1.5rem 0;
+  opacity: 0;
+  animation-name: HideList;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: step-start;
+  background: #FFFFFF;
+  border: 1px solid rgba(51, 57, 80, 0.153273);
+  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
+  border-radius: 8px;
+  transform: translateY(1.5rem);
 }
 
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected:after {
-  background-image: url("data:image/svg+xml,%3Csvg width='13' height='9' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.5L6.5 2L12 7.5' stroke='%235175FF' stroke-width='2'/%3E%3C/svg%3E%0A");
-
-}
-
-/* style the items (options), including the selected item: */
-.select-items div {
-  color: hsla(227, 22%, 26%, 1);
-  padding: 1.5rem 0 1rem 0;
-  margin: 0 1rem 0;
-  cursor: pointer;
+.select-box__option {
+  background-color: #fff;
   border-bottom: 1px solid hsla(227, 14%, 52%, .25);
+  height: 100%;
+  display: block;
 }
 
-
-.select-selected {
-  padding: 0 0 1rem 1rem;
-  color: hsla(227, 22%, 26%, 1);
-  cursor: pointer;
-  border-bottom: 1px solid hsla(227, 14%, 52%, .5);
+.select-box__option[for="0"] {
+  padding-bottom: 1rem;
+  width: 100%;
 }
 
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: hsl(0, 0%, 100%);
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
+.select-box__option[for="1"] {
+  padding: 1rem 1.5rem 1rem 0;
 }
 
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
+.select-box__option[for="2"] {
+  border-bottom: unset;
+  padding-top: 1rem;
 }
 
-/* .select-items div:hover,
-.same-as-selected {
+.select-box__option:hover,
+.select-box__value:hover,
+.select-box__input:hover {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.50438L3.9944 10.4988L13.4932 1' stroke='%235175FF' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
 
-} */
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0);
+  }
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.select-box__list--active {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.50438L3.9944 10.4988L13.4932 1' stroke='%235175FF' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
