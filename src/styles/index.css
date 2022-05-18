@@ -337,12 +337,13 @@ form p:not(.select-box__list p) {
 
 .select-box__current {
   position: relative;
-  /* box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1); */
   cursor: pointer;
-  outline: none; 
+  outline: none;
 }
-.select-box__current:hover {
+
+.select-box__current {
   background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.50438L3.9944 10.4988L13.4932 1' stroke='%235175FF' stroke-width='2'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
 }
 
 .select-box__current:focus+.select-box__list {
@@ -350,11 +351,12 @@ form p:not(.select-box__list p) {
   animation-name: none;
 }
 
-.select-box__current:focus+.select-box__list .select-box__option{
+.select-box__current:focus+.select-box__list .select-box__option {
   cursor: pointer;
 }
 
 .select-box__current:focus .select-box__icon {
+
   transform: translateY(-50%) rotate(180deg);
 }
 
@@ -396,15 +398,15 @@ form p:not(.select-box__list p) {
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: step-start;
-  background: #FFFFFF;
-  border: 1px solid rgba(51, 57, 80, 0.153273);
-  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
+  background: hsl(0, 0%, 100%);
+  border: 1px solid hsla(228, 22%, 26%, 0.153);
+  box-shadow: 0px 50px 50px -25px hsla(227, 34%, 45%, 0.747);
   border-radius: 8px;
   transform: translateY(1.5rem);
 }
 
 .select-box__option {
-  background-color: #fff;
+  background-color: hsl(0, 0%, 100%);
   border-bottom: 1px solid hsla(227, 14%, 52%, .25);
   height: 100%;
   display: block;
@@ -424,10 +426,21 @@ form p:not(.select-box__list p) {
   padding-top: 1rem;
 }
 
-.select-box__option:hover,
-.select-box__value:hover,
-.select-box__input:hover {
+.select-box__option[for="0"]:hover,
+.select-box__option[for="1"]:hover,
+.select-box__option[for="2"]:hover {
   background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.50438L3.9944 10.4988L13.4932 1' stroke='%235175FF' stroke-width='2'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+}
+
+.select-box__option[for="0"]:hover,
+.select-box__option[for="1"]:hover {
+  background-position: right 5px bottom 1.5rem;
+}
+
+.select-box__option[for="2"]:hover {
+  background-position: right 5px bottom .5rem;
+  transition: background-image 150ms ease-in;
 }
 
 @keyframes HideList {
@@ -442,8 +455,11 @@ form p:not(.select-box__list p) {
 
 .strong {
   font-weight: 700;
+  padding-right: .5rem;
+  color: hsl(227, 22%, 26%);
 }
 
-.select-box__list--active {
-  background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.50438L3.9944 10.4988L13.4932 1' stroke='%235175FF' stroke-width='2'/%3E%3C/svg%3E%0A");
+.select-box p {
+  font-weight: 700;
+  color: hsla(227, 22%, 26%, .4);
 }
