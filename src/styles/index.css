@@ -300,25 +300,15 @@ form {
   border-radius: 0.8125rem;
   width: calc(100% - 3rem);
   position: absolute;
-  padding: 1.5rem;
-  align-items: end;
   height: 29.0625rem;
   bottom: 5.4375rem;
   margin: auto 1.5rem;
+  text-align: left;
 }
 
-.sign-up-form {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.sign-up-form li {
-  all: unset;
-  margin-top: 24px;
-  line-height: 1.75;
-  color: hsla(227, 14%, 52%, .5);
-  font-size: 1rem;
-  font-weight: 400;
+form p {
+  border-bottom: 1px solid hsla(227, 14%, 52%, .5);
+  padding: 0 0 1rem 1rem;
 }
 
 ::placeholder {
@@ -327,3 +317,78 @@ form {
   font-size: 1rem;
   font-weight: 400;
 }
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: hsl(0, 0%, 100%);
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%235175FF' stroke-width='2' d='M1 1l5.5 5.5L12 1' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 11px bottom 22px;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  /* top: 14px;
+  right: 10px; */
+  width: 0;
+  height: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='9' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.5L6.5 2L12 7.5' stroke='%235175FF' stroke-width='2'/%3E%3C/svg%3E%0A")
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected:after {
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='9' viewBox='0 0 13 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.5L6.5 2L12 7.5' stroke='%235175FF' stroke-width='2'/%3E%3C/svg%3E%0A");
+
+}
+
+/* style the items (options), including the selected item: */
+.select-items div {
+  color: hsla(227, 22%, 26%, 1);
+  padding: 1.5rem 0 1rem 0;
+  margin: 0 1rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid hsla(227, 14%, 52%, .25);
+}
+
+
+.select-selected {
+  padding: 0 0 1rem 1rem;
+  color: hsla(227, 22%, 26%, 1);
+  cursor: pointer;
+  border-bottom: 1px solid hsla(227, 14%, 52%, .5);
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+/* .select-items div:hover,
+.same-as-selected {
+
+} */

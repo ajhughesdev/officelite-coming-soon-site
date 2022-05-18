@@ -31,34 +31,38 @@
       </div>
     </main>
     <footer class="footer-signup">
-      <form action="/sign-up-form-data" method="post">
-        <ul class="sign-up-form">
-          <li>
+      <form action="/sign-up-form-data" class="sign-up-form" method="post">
+        <section class="inputs">
+          <p>
             <input type="text" placeholder="Name" />
-          </li>
-          <li>
+          </p>
+          <p>
             <input type="email" placeholder="Email Address" />
-          </li>
-          <li>
+          </p>
+          <div class="custom-select" style="width:100%;">
             <select>
-              <option value="Basic Pack Free">1</option>
-              <option value="Pro Pack $9.99">2</option>
-              <option value="Ultimate Pack $19.99">3</option>
+              <option value="0">Options</option>
+              <option value="1"><span>Basic Pack</span><span> Free</span></option>
+              <option value="2"><span>Pro Pack</span><span> $9.99</span></option>
+              <option value="3"><span>Ultimate Pack</span><span> $19.99</span></option>
             </select>
-          </li>
-          <li>
+          </div>
+          <p>
             <input type="text" placeholder="Phone Number" />
-          </li>
-          <li>
+          </p>
+          <p>
             <input type="text" placeholder="Company" />
-          </li>
-          <li>
-            <button type="submit">Get on the list</button>
-          </li>
-        </ul>
+          </p>
+        </section>
+        <section>
+
+          <button type="submit">Get on the list</button>
+
+        </section>
       </form>
 
     </footer>
+    <script src="./../src/scripts/dropdownList.js"></script>
     <script src="./../src/scripts/countdownTimer.js"></script>
   </body>
 
